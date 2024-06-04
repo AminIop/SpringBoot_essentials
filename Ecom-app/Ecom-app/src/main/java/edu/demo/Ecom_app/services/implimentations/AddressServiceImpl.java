@@ -27,6 +27,11 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
+    public Address AddAddressInternalVersion(Address address) {
+        return addressRepository.save(address);
+    }
+
+    @Override
     public List<Address> findAllAddresses() {
         return addressRepository.findAll();
     }

@@ -1,5 +1,6 @@
 package edu.demo.Ecom_app.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,6 +18,4 @@ public class Address {
     private String street;
     private String city;
     private String country;
-    /*@OneToOne
-    private User user;*/
 }

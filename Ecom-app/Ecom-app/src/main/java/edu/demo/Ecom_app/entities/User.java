@@ -2,6 +2,8 @@ package edu.demo.Ecom_app.entities;
 
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,7 +26,8 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private Date dateOfBirth;
+    /*@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date dateOfBirth;*/
     @OneToOne
     private Address address;
 
